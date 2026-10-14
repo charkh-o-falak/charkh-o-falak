@@ -1,0 +1,83 @@
+/* Charkh o Falak / Warm editorial appearance / v1.5.1 */
+:root {
+  color-scheme: light;
+  --page:#F6F1E6;
+  --paper:#FFFCF6;
+  --olive:#293E33;
+  --olive-soft:#425747;
+  --terra:#DC653F;
+  --terra-hover:#C9502E;
+  --sage:#E1E9DE;
+  --ink:#262A24;
+  --muted:#686F63;
+  --quiet:#888C80;
+  --line:#DDDCCF;
+  --success:#477A57;
+  --warn:#A86A24;
+  --danger:#B74737;
+  font-family:Tahoma,'Segoe UI',Arial,sans-serif;
+}
+*{box-sizing:border-box}
+html{color-scheme:light}
+body{width:360px;margin:0;background:var(--page);color:var(--ink);font-family:Tahoma,'Segoe UI',Arial,sans-serif;-webkit-font-smoothing:antialiased}
+button{font:inherit}
+.shell{padding:21px 21px 17px;position:relative;overflow:hidden}
+.topbar,.brand,.control-main,.button,.telegram{display:flex;align-items:center}
+.topbar{justify-content:space-between;gap:12px;padding-bottom:19px;border-bottom:1px solid var(--line)}
+.brand{gap:11px;min-width:0}
+.brand-icon{width:42px;height:42px;border-radius:12px;box-shadow:0 3px 0 rgba(41,62,51,.1)}
+.brand-labels{display:flex;flex-direction:column;gap:4px;min-width:0}
+.brand-labels strong{font-size:18px;font-weight:800;line-height:1.25;white-space:nowrap;letter-spacing:-.02em}
+.brand-labels span{font-size:9px;letter-spacing:.12em;font-weight:750;color:var(--olive-soft);white-space:nowrap}
+.version{padding:6px 9px;border:1px solid #CDCEBE;border-radius:100px;color:var(--olive);font-size:10px;font-weight:800;white-space:nowrap;background:#E9E7D9}
+.version-mark{color:var(--terra);margin-left:3px;font-size:8px}
+.intro{padding:20px 0 18px}
+.eyebrow{display:flex;align-items:center;gap:8px;font-size:10px;font-weight:800;color:var(--terra);margin-bottom:10px}
+.eyebrow-dot{width:7px;height:7px;border-radius:50%;background:var(--terra);box-shadow:0 0 0 4px #EEDDD0}
+.hero-grid{display:grid;grid-template-columns:minmax(0,1fr) 91px;gap:4px;align-items:center;min-height:125px}
+.hero-copy{min-width:0}
+h1{font-size:22px;line-height:1.65;margin:0;font-weight:850;letter-spacing:-.03em}
+h1 span{font-family:'Segoe UI',Arial,sans-serif;font-size:22px;font-weight:800;color:var(--terra);letter-spacing:-.03em}
+.intro-subtitle{color:var(--muted);font-size:10.5px;line-height:1.75;margin:7px 0 0}
+.hero-art{width:90px;height:99px;display:grid;place-items:center;position:relative;transform:rotate(8deg)}
+.hero-circle{position:absolute;width:86px;height:86px;border-radius:50%;border:2px dashed #C9C8B4;transform:rotate(12deg)}
+.hero-art img{position:relative;width:69px;height:69px;border-radius:16px;box-shadow:0 8px 18px rgba(41,62,51,.12);transform:rotate(-8deg)}
+.hero-mini{position:absolute;width:11px;height:11px;background:var(--terra);border-radius:4px;transform:rotate(15deg)}
+.hero-mini-a{top:4px;left:0}.hero-mini-b{bottom:1px;right:9px;width:7px;height:7px;background:var(--olive-soft)}
+.control-card{background:var(--paper);border:1px solid #E3DDCF;border-radius:15px;padding:16px;box-shadow:0 5px 0 rgba(41,62,51,.065)}
+.control-main{justify-content:space-between;gap:12px}
+.control-copy{display:flex;flex-direction:column;gap:5px}
+.small-label{color:var(--quiet);font-size:10px;font-weight:750}
+.control-copy strong{font-size:16px;line-height:1.4;color:var(--olive)}
+.power-toggle{width:59px;height:39px;padding:2px;background:transparent;border:0;cursor:pointer;flex-shrink:0}
+.toggle-track{display:block;position:relative;width:55px;height:35px;background:#C9CBC1;border-radius:99px;border:1px solid #B7BBAF;transition:background .2s,border-color .2s}
+.toggle-thumb{width:27px;height:27px;border-radius:50%;position:absolute;top:3px;right:3px;background:var(--paper);box-shadow:0 1px 5px rgba(0,0,0,.18);transition:transform .2s,background .2s}
+.power-toggle[aria-checked="true"] .toggle-track{background:var(--olive);border-color:var(--olive)}
+.power-toggle[aria-checked="true"] .toggle-thumb{background:#F5E6C6;transform:translateX(-20px)}
+.power-toggle:disabled{opacity:.55;cursor:wait}
+.status{display:flex;gap:8px;align-items:flex-start;padding:12px 0 0;margin-top:13px;border-top:1px dashed var(--line);min-height:33px}
+.status-dot{display:block;flex-shrink:0;width:8px;height:8px;margin-top:6px;border-radius:50%}
+.status-dot--idle{background:#9DA49A}.status-dot--ok{background:var(--success);box-shadow:0 0 0 3px #D7E6D8}
+.status-dot--armed{background:var(--terra);box-shadow:0 0 0 3px #FAE5D8}
+.status-dot--warn{background:var(--warn)}.status-dot--bad{background:var(--danger)}
+.status-text{font-size:11px;line-height:1.78;color:var(--muted)}
+.actions{display:grid;gap:9px;margin-top:18px}
+.button{min-height:48px;width:100%;border-radius:12px;justify-content:center;gap:12px;font-size:13.5px;font-weight:800;cursor:pointer;transition:transform .15s,background .15s,border-color .15s}
+.button:active{transform:translateY(2px)}
+.button-primary{border:1px solid var(--olive);color:#FFFCF6;background:var(--olive);box-shadow:0 4px 0 #17291E}
+.button-primary:hover{background:var(--olive-soft)}
+.button-primary svg{transform:scaleX(-1);stroke:var(--paper)}
+.button-secondary{color:var(--olive);background:var(--paper);border:1px solid var(--line);min-height:39px;font-weight:750;font-size:11px}
+.button-secondary:hover{border-color:var(--olive)}
+.error{padding:10px 12px;margin:10px 0 0;color:var(--danger);background:#FFEFE8;border:1px solid #EDC5B8;border-radius:10px;font-size:11px;line-height:1.7}
+.error:empty{display:none}
+.footnote{color:var(--quiet);font-size:10px;line-height:1.75;text-align:center;margin:15px 0 18px}
+.footer{border-top:1px solid var(--line);padding-top:13px;display:flex;flex-direction:column;align-items:stretch;gap:11px}
+.telegram{justify-content:center;gap:9px;color:var(--terra);text-decoration:none;font-size:11px;font-weight:800;background:#F2E3D6;border:1px solid #E8CFB9;border-radius:10px;padding:10px 6px;transition:background .15s}
+.telegram:hover{background:#EBD4C1}
+.telegram svg:first-child{color:var(--terra)}
+.telegram svg:last-child{color:var(--terra)}
+.footer-caption{color:#8B8F7F;font-size:9px;letter-spacing:.14em;font-weight:800;text-align:center}
+[hidden]{display:none!important}
+:focus-visible{outline:2px solid var(--terra);outline-offset:3px}
+@media(prefers-reduced-motion:reduce){*{transition:none!important}}
